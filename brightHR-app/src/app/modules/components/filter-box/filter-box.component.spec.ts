@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ContentFilterComponent } from './content-filter.component';
+import { FilterBoxComponent } from './filter-box.component';
 
-describe('ContentFilterComponent', () => {
-  let component: ContentFilterComponent;
-  let fixture: ComponentFixture<ContentFilterComponent>;
+describe('FilterBoxComponent', () => {
+  let component: FilterBoxComponent;
+  let fixture: ComponentFixture<FilterBoxComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ContentFilterComponent ]
+      declarations: [ FilterBoxComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ContentFilterComponent);
+    fixture = TestBed.createComponent(FilterBoxComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
