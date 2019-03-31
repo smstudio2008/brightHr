@@ -1,6 +1,6 @@
 import { IAction } from './../interface/action';
 import { InitialAppState } from '../interface/initialState';
-import { SEARCH_RESULT_SUCCESS, SEARCH_RESULT_REMOVE } from '../actions/action';
+import { SEARCH_RESULT_SUCCESS, SEARCH_RESULT_REMOVE, CONTENT_RESULT_SEARCH } from '../actions/action';
 
 export function rootReducer(state: InitialAppState, action: IAction): InitialAppState {
   const newState = { ...state };
@@ -13,6 +13,10 @@ export function rootReducer(state: InitialAppState, action: IAction): InitialApp
 
     case SEARCH_RESULT_REMOVE:
       newState.searchResult = [];
+      break;
+
+    case CONTENT_RESULT_SEARCH:
+      newState.searchResult = payload;
       break;
   }
 
