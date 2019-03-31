@@ -1,0 +1,9 @@
+version: '3.6'
+services:
+    brighthr:
+        container_name: search-mock-api
+        build: ./angular/docker
+        volumes:
+            - './angular:/usr/src/app/'
+        ports:
+            - '4500:4500'

@@ -23,7 +23,8 @@
           <h5 class="title is-5 has-text-centered">{{file.name}}</h5>
           <h6 class="subtitle is-6 has-text-centered">type-{{file.type}}</h6>
           <h6 class="subtitle is-6 has-text-centered">size-{{file.size}}kB</h6>
-          <h6 class="subtitle is-6 has-text-centered">created on- {{file.date}}</h6>
+          <h6 *ngIf="res.type !== 'folder'" class="subtitle is-6
+            has-text-centered">created on-{{file.date}}</h6>
         </div>
         <div *ngIf="res.type !== 'folder'" class="card-footer">
           <div class="card-footer-item">
