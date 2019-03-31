@@ -1,121 +1,17 @@
-<!-- 
-<div class="columns">
-
-  <div class="column is-narrow">
-    <div class="box" style="width: 170px;">
-      <figure class="image is-64x64">
-        <img src="https://image.flaticon.com/icons/svg/148/148950.svg">
-      </figure>
-      <p class="title is-6">Folders</p>
-      <p>last modifty 20-03-2019</p>
-    </div>
-  </div>
-</div>
- -->
-<div class="columns is-mobile is-multiline is-centered">
-  <div class="column is-narrow">
+<div *ngIf="searchResult" class="columns is-mobile is-multiline is-centered">
+  <div *ngFor="let res of (searchResult | async)" class="column is-narrow">
     <div class="card">
       <div class="card-content">
         <div class="content">
           <figure class="image is-128x128 has-text-centered">
             <img src="https://image.flaticon.com/icons/svg/148/148952.svg">
           </figure>
-          <h5 class="title is-4 has-text-centered">Folders</h5>
-          <h6 class="subtitle is-6 has-text-centered">PDF Document</h6>
+          <h5 class="title is-4 has-text-centered">{{res.name}}</h5>
+          <h6 class="subtitle is-6 has-text-centered">{{res.type}}</h6>
         </div>
         <div class="card-footer">
           <div class="card-footer-item">
-            <p>last created 20-02-2019</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="column is-narrow">
-    <div class="card">
-      <div class="card-content">
-        <div class="content">
-          <figure class="image is-128x128 has-text-centered">
-            <img src="https://image.flaticon.com/icons/svg/148/148952.svg">
-          </figure>
-          <h5 class="title is-4 has-text-centered">Folders</h5>
-          <h6 class="subtitle is-6 has-text-centered">PDF Document</h6>
-        </div>
-        <div class="card-footer">
-          <div class="card-footer-item">
-            <p>last created 20-02-2019</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="column is-narrow">
-    <div class="card">
-      <div class="card-content">
-        <div class="content">
-          <figure class="image is-128x128 has-text-centered">
-            <img src="https://image.flaticon.com/icons/svg/139/139083.svg">
-          </figure>
-          <h5 class="title is-4 has-text-centered">Folders</h5>
-          <h6 class="subtitle is-6 has-text-centered">PDF Document</h6>
-        </div>
-        <div class="card-footer">
-          <div class="card-footer-item">
-            <p>last created 20-02-2019</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="column is-narrow">
-    <div class="card">
-      <div class="card-content">
-        <div class="content">
-          <figure class="image is-128x128 has-text-centered">
-            <img src="https://image.flaticon.com/icons/svg/139/139083.svg">
-          </figure>
-          <h5 class="title is-4 has-text-centered">Folders</h5>
-          <h6 class="subtitle is-6 has-text-centered">PDF Document</h6>
-        </div>
-        <div class="card-footer">
-          <div class="card-footer-item">
-            <p>last created 20-02-2019</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="column is-narrow">
-    <div class="card">
-      <div class="card-content">
-        <div class="content">
-          <figure class="image is-128x128 has-text-centered">
-            <img src="https://image.flaticon.com/icons/svg/148/148952.svg">
-          </figure>
-          <h5 class="title is-4 has-text-centered">Folders</h5>
-          <h6 class="subtitle is-6 has-text-centered">PDF Document</h6>
-        </div>
-        <div class="card-footer">
-          <div class="card-footer-item">
-            <p>last created 20-02-2019</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="column is-narrow">
-    <div class="card">
-      <div class="card-content">
-        <div class="content">
-          <figure class="image is-128x128 has-text-centered">
-            <img src="https://image.flaticon.com/icons/svg/148/148952.svg">
-          </figure>
-          <h5 class="title is-4 has-text-centered">Folders</h5>
-          <h6 class="subtitle is-6 has-text-centered">PDF Document</h6>
-        </div>
-        <div class="card-footer">
-          <div class="card-footer-item">
-            <p>last created 20-02-2019</p>
+            <p>added date - {{res.added}} </p>
           </div>
         </div>
       </div>
