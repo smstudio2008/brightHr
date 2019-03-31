@@ -1,11 +1,9 @@
 <div class="field">
   <p class="control">
     <span class="select">
-      <select>
-        <option selected>filters by</option>
-        <option>Name</option>
-        <option>Size</option>
-        <option>Date</option>
+      <select [(ngModel)]="selectedLevel" (change)="selected()">
+        <option disabled selected>Filters Option</option>
+        <option *ngFor="let option of selections" [ngValue]="option">{{option}}</option>
       </select>
     </span>
     <span class="icon is-small is-left">
