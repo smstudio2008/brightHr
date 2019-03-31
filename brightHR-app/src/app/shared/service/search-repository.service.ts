@@ -7,9 +7,7 @@ import { Observable } from 'rxjs';
 export class SearchRepository {
   public constructor(private http: HttpClient) {}
 
-  //  private defaultNumberOfResults = 6;
-
   public fetchAll(): Observable<Content[]> {
-    return this.http.get<Content[]>('http://www.mocky.io/v2/5ca0b24e370000640089916f');
+    return this.http.get<Content[]>('http://www.mocky.io/v2/5ca11bc73700005600899225');
   }
 }

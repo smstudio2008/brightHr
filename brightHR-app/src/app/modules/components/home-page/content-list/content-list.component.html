@@ -1,21 +1,37 @@
 <div *ngIf="searchResult" class="columns is-mobile is-multiline is-centered">
-  <div *ngFor="let res of (searchResult | async)" class="column is-narrow">
+  <div *ngFor="let res of searchResult | async" class="column
+    is-narrow">
     <div class="card">
       <div class="card-content">
         <div class="content">
-          <figure class="image is-128x128 has-text-centered">
-            <img src="https://image.flaticon.com/icons/svg/148/148952.svg">
+          <figure *ngIf="res.type === 'folder'" class="image is-128x128
+            has-text-centered">
+            <img
+              src="https://image.flaticon.com/icons/svg/148/148952.svg">
           </figure>
-          <h5 class="title is-4 has-text-centered">{{res.name}}</h5>
-          <h6 class="subtitle is-6 has-text-centered">{{res.type}}</h6>
+          <figure *ngIf="res.type !== 'folder'" class="image is-128x128
+            has-text-centered">
+            <img
+              src="https://image.flaticon.com/icons/svg/1102/1102457.svg">
+          </figure>
+          <h5 class="title is-5 has-text-centered">{{res.name}}</h5>
+          <h6 class="subtitle is-6 has-text-centered">type - {{res.type}}</h6>
+          <h6 *ngIf="res.type !== 'folder'" class="subtitle is-6
+            has-text-centered">size-{{res.size}}kB</h6>
         </div>
-        <div class="card-footer">
+        <div *ngFor="let file of res.files" class="content">
+          <h5 class="title is-5 has-text-centered">{{file.name}}</h5>
+          <h6 class="subtitle is-6 has-text-centered">type-{{file.type}}</h6>
+          <h6 class="subtitle is-6 has-text-centered">size-{{file.size}}kB</h6>
+          <h6 class="subtitle is-6 has-text-centered">created on- {{file.date}}</h6>
+        </div>
+        <div *ngIf="res.type !== 'folder'" class="card-footer">
           <div class="card-footer-item">
-            <p>added date - {{res.added}} </p>
+            <p class="date--font">created on-
+              {{res.added}} </p>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<app-content-items></app-content-items>
