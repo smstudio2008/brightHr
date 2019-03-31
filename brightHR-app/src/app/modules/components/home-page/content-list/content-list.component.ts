@@ -1,3 +1,4 @@
+import { SearchRepository } from 'src/app/shared/service/search-repository.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./content-list.component.scss']
 })
 export class ContentListComponent implements OnInit {
-
-  constructor() { }
+  constructor(private contentList: SearchRepository) {}
 
   ngOnInit() {
+    this.name();
   }
 
+  public name() {
+    this.contentList.fetchAll().subscribe(x => {
+      console.log(x);
+    });
+  }
 }
