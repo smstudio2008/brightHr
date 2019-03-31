@@ -10,6 +10,6 @@ export class SearchRepository {
   //  private defaultNumberOfResults = 6;
 
   public fetchAll(): Observable<Content> {
-    return this.http.get<Content>('../../api/mock/content-reponse.json');
+    return this.http.get<Content>('http://www.mocky.io/v2/5ca0b24e370000640089916f');
   }
 }
