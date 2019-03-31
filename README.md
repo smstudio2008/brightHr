@@ -1,6 +1,6 @@
 # BrightHr Search Project
 
-![Alt text](https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_1496668668/brighthr.png)
+![Alt text](https://www.manchesterdigital.com/sites/default/files/BrightHR_logo_winehouse.png)
 
 ## Introduction
 
