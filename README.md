@@ -8,7 +8,7 @@ This BrightHr Search Project allows the user to search pre-existing data from mo
 
 ## DEMO Production
 
-[BrightHR API Search App](https://smstudio2008.github.io/Booking-Go-Tech/ 'BrightHR API Search App'):
+[BrightHR API Search App](https://smstudio2008.github.io/brightHr 'BrightHR API Search App'):
 
 # Installation
 
