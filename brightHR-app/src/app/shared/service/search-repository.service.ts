@@ -8,6 +8,6 @@ export class SearchRepository {
   public constructor(private http: HttpClient) {}
 
   public fetchAll(): Observable<Content[]> {
-    return this.http.get<Content[]>('http://www.mocky.io/v2/5ca11bc73700005600899225');
+    return this.http.get<Content[]>('https://www.mocky.io/v2/5ca11bc73700005600899225');
   }
 }
