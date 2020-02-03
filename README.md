@@ -1,14 +1,14 @@
-# BrightHr Search Project
+# Bright Search Project
 
 ![Alt text](https://www.manchesterdigital.com/sites/default/files/BrightHR_logo_winehouse.png)
 
 ## Introduction
 
-This BrightHr Search Project allows the user to search pre-existing data from mock API end-points
+This Bright Search Project allows the user to search pre-existing data from mock API end-points
 
 ## DEMO Production
 
-[BrightHR API Search App](https://smstudio2008.github.io/brightHr 'BrightHR API Search App'):
+[Bright API Search App](https://smstudio2008.github.io/brightHr 'Bright API Search App'):
 
 # Installation
 
